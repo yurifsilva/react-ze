@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { useSelector } from 'react-redux';
 import ZeApi from '../../Services/ZeApi';
+import Loading from '../Loading/Loading';
 
 export default function Products() {
 	const Address = useSelector(state => state.Address);
@@ -40,6 +41,7 @@ export default function Products() {
 			{Products && Products.map((Product)=> {
 			return <div key={Product.id}>{Product.title}</div>
 			})}
+			{ IsLoading ? <Loading /> : null }
 		</div>
 	);
 }
