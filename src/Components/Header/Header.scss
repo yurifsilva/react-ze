@@ -1,0 +1,47 @@
+.header {
+	width: 100%;
+	background-color: #333;
+	display: flex;
+	justify-content: center;
+	.content {
+		max-width: 1200px;
+		padding: 20px 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		.logo {
+			width: 150px;
+			height: auto;
+			margin-left: 20px;
+		}
+		.address {
+			display: flex;
+			align-items: center;
+			.content-address {
+				display: flex;
+				flex-direction: column;
+				max-width: 200px;
+				margin-left: 32px;
+				.address-title {
+					font-size: 14px;
+					color: #FFFFFF;
+				}
+				.address-info {
+					font-size: 14px;
+					color: #FFC500;
+					text-overflow: ellipsis;
+					overflow: hidden;
+					white-space: nowrap;
+					margin-top: 4px;
+				}
+			}
+			.delete-address {
+				color: white;
+				margin-left: 16px;
+				font-size: 24px;
+				cursor: pointer;
+			}
+		}
+	}
+	
+}
