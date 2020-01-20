@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-ze/static/css/main.1c0f815e.chunk.css",
+    "main.js": "/react-ze/static/js/main.c64983d6.chunk.js",
+    "main.js.map": "/react-ze/static/js/main.c64983d6.chunk.js.map",
+    "runtime-main.js": "/react-ze/static/js/runtime-main.da77b02c.js",
+    "runtime-main.js.map": "/react-ze/static/js/runtime-main.da77b02c.js.map",
+    "static/js/2.ffa5c7d0.chunk.js": "/react-ze/static/js/2.ffa5c7d0.chunk.js",
+    "static/js/2.ffa5c7d0.chunk.js.map": "/react-ze/static/js/2.ffa5c7d0.chunk.js.map",
+    "index.html": "/react-ze/index.html",
+    "precache-manifest.e55090affb28eba0ec1487f5aea7cb70.js": "/react-ze/precache-manifest.e55090affb28eba0ec1487f5aea7cb70.js",
+    "service-worker.js": "/react-ze/service-worker.js",
+    "static/css/main.1c0f815e.chunk.css.map": "/react-ze/static/css/main.1c0f815e.chunk.css.map",
+    "static/js/2.ffa5c7d0.chunk.js.LICENSE": "/react-ze/static/js/2.ffa5c7d0.chunk.js.LICENSE",
+    "static/media/logo.png": "/react-ze/static/media/logo.8df94341.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da77b02c.js",
+    "static/js/2.ffa5c7d0.chunk.js",
+    "static/css/main.1c0f815e.chunk.css",
+    "static/js/main.c64983d6.chunk.js"
+  ]
+}
