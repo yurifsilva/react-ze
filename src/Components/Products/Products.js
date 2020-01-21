@@ -1,27 +1,30 @@
 import React, {useEffect, useState} from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import ProductsActions from '../../Store/ProductsActions';
+import Categories from '../Categories/Categories';
+import ProductComponent from './Components/Product';
 import ZeApi from '../../Services/ZeApi';
 import Loading from '../Loading/Loading';
 
 export default function Products() {
-	const Address = useSelector(state => state.Address);
-	const [Categories, setCategories] = useState([]);
-	const [Products, setProducts] = useState([]);
+	const Products = useSelector(state => {
+		return state.Products;
+	});
 	const [IsLoading, setIsLoading] = useState(false);
+	const HasProducts = Products && Products.length > 0;
+	const dispatch = useDispatch();
 	
 	useEffect(() => {
 		async function search() {
 			try {
 				setIsLoading(true);
 
-				const resultCategoriesSearch = await ZeApi.getAllCategoriesSearch();
-				setCategories(resultCategoriesSearch.data.allCategory);
-
+				
 				const resultProducts = await ZeApi.getProducts();
-				setProducts(resultProducts.data.poc.products);
 
-				console.log('resultCategoriesSearch', resultCategoriesSearch);
-				console.log('resultProducts', resultProducts);
+				dispatch(ProductsActions.setProducts({Products: resultProducts.data.poc.products}));
+
+				console.log('resultProducts', resultProducts.data.poc.products);
 			} catch (error) {
 				console.error(error);
 			} finally {
@@ -32,16 +35,17 @@ export default function Products() {
 		
 		search();
 
-	}, [Address]);
+	}, [dispatch]);
 	return (
-		<div>
-			{Categories && Categories.map((Category)=> {
-			return <div key={Category.id}>{Category.title}</div>
-			})}
-			{Products && Products.map((Product)=> {
-			return <div key={Product.id}>{Product.title}</div>
-			})}
+		<>
 			{ IsLoading ? <Loading /> : null }
-		</div>
+
+			<Categories />
+
+			{HasProducts ?  Products.map((Product)=> {
+				return <ProductComponent key={Product.id} Product={Product} /> 
+			}) : null}
+			
+		</>
 	);
 }
