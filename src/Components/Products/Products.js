@@ -38,14 +38,13 @@ export default function Products() {
 	}, [dispatch]);
 	return (
 		<>
-			{ IsLoading ? <Loading /> : null }
-
 			<Categories />
 
 			{HasProducts ?  Products.map((Product)=> {
 				return <ProductComponent key={Product.id} Product={Product} /> 
 			}) : null}
 			
+			{ IsLoading ? <Loading /> : null }
 		</>
 	);
 }

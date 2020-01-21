@@ -49,10 +49,10 @@ export default function Categories() {
 
 	return (
 		<>
-			{ IsLoading ? <Loading /> : null }
 			{HasCategories ?  Categories.map((Category)=> {
 				return <div key={Category.id} onClick={() => handleSetProducts(Category)}><CategoryComponent  Category={Category} /> </div>
 			}) : null}
+			{ IsLoading ? <Loading /> : null }
 		</>
 	);
 }
