@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90dc827e42a7ea3ca504e7ed4a49b585",
+    "revision": "d3cf15a32a208466f697a09a8fed6615",
     "url": "/react-ze/index.html"
   },
   {
-    "revision": "85e980f22961d9c7b8ba",
-    "url": "/react-ze/static/css/main.e60940d5.chunk.css"
+    "revision": "88c0f70bd02c495131f6",
+    "url": "/react-ze/static/css/main.75c1ff86.chunk.css"
   },
   {
-    "revision": "4a19e9c905ca6d5e13c1",
-    "url": "/react-ze/static/js/2.a87ac5e5.chunk.js"
+    "revision": "fd5edd264f49eba97564",
+    "url": "/react-ze/static/js/2.7f0c3d50.chunk.js"
   },
   {
     "revision": "e2fc3609d47d90b8cc004bfe15ddf15e",
-    "url": "/react-ze/static/js/2.a87ac5e5.chunk.js.LICENSE"
+    "url": "/react-ze/static/js/2.7f0c3d50.chunk.js.LICENSE"
   },
   {
-    "revision": "85e980f22961d9c7b8ba",
-    "url": "/react-ze/static/js/main.22c91b36.chunk.js"
+    "revision": "88c0f70bd02c495131f6",
+    "url": "/react-ze/static/js/main.149c9de6.chunk.js"
   },
   {
     "revision": "7c75bc57c2ac712b1e25",
