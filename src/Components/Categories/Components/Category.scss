@@ -1,0 +1,22 @@
+.category {
+	height: 48px;
+	width: 171px;
+	display: flex;
+	cursor: pointer;
+	border-radius: 8px;
+	box-sizing: border-box;
+	justify-content: center;
+	background-color: #FFFFFF;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.06);
+	padding-top: 12px;
+	margin: 4px;
+	padding-bottom: 12px;
+	flex: 1;
+	align-items: center;
+	.image {
+		width: 24px;
+		height: 24px;
+		margin-right: 5px;
+	}
+}

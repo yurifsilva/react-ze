@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import Store from '../Store/index';
 import Routes from './Routes'
 import Header from '../Components/Header/Header';
+import Footer from '../Components/Footer/Footer';
 import './App.scss'
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
 			<div className="app">
 				<Header />
 				<Routes />
-				<div>Footer</div>
+				<Footer />
 			</div>
 		</Provider>
 	);

@@ -16,12 +16,14 @@ export default function Categories() {
 
 	const handleSetProducts = async (Category) => {
 		try {
+			dispatch(ProductsActions.setLoadingProducts());
 			const resultProducts = await ZeApi.getProducts('532', '', Category.id);
 
 			dispatch(ProductsActions.setProducts({Products: resultProducts.data.poc.products}));
-			console.log('new', resultProducts.data.poc.products)
 		} catch (error) {
 			console.error(error);
+		} finally {
+			dispatch(ProductsActions.setFinishLoadingProducts());
 		}
 	};
 
@@ -31,9 +33,9 @@ export default function Categories() {
 				setIsLoading(true);
 
 				const resultCategoriesSearch = await ZeApi.getAllCategoriesSearch();
+
 				dispatch(CategoriesActions.setCategories({Categories: resultCategoriesSearch.data.allCategory}));
 
-				console.log('resultCategoriesSearch', resultCategoriesSearch);
 			} catch (error) {
 				console.error(error);
 			} finally {
@@ -49,9 +51,15 @@ export default function Categories() {
 
 	return (
 		<>
-			{HasCategories ?  Categories.map((Category)=> {
-				return <div key={Category.id} onClick={() => handleSetProducts(Category)}><CategoryComponent  Category={Category} /> </div>
-			}) : null}
+			<div className="categories">
+				{HasCategories ?  Categories.map((Category)=> {
+					return (
+						<div key={Category.id} onClick={() => handleSetProducts(Category)}><CategoryComponent  Category={Category} /> </div>
+					)
+				}) : null}
+				{HasCategories ? <div onClick={() => handleSetProducts({id: null})}><CategoryComponent  Category={{title: 'Limpar'}}/> </div> : null}
+			</div>
+			
 			{ IsLoading ? <Loading /> : null }
 		</>
 	);
