@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3cf15a32a208466f697a09a8fed6615",
+    "revision": "2e096e21c527382371ad40f2db360bda",
     "url": "/react-ze/index.html"
   },
   {
-    "revision": "88c0f70bd02c495131f6",
+    "revision": "f2b0479fc50cbdfe0596",
     "url": "/react-ze/static/css/main.75c1ff86.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-ze/static/js/2.7f0c3d50.chunk.js.LICENSE"
   },
   {
-    "revision": "88c0f70bd02c495131f6",
-    "url": "/react-ze/static/js/main.149c9de6.chunk.js"
+    "revision": "f2b0479fc50cbdfe0596",
+    "url": "/react-ze/static/js/main.813a0f66.chunk.js"
   },
   {
     "revision": "7c75bc57c2ac712b1e25",
